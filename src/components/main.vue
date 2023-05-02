@@ -1,10 +1,16 @@
 
 <script>
-import Card from './card.vue'
+import Card from './card.vue';
+import {store} from '../store';
 export default {
   name:'Main',
   components:{
     Card,
+  },
+  data(){
+    return {
+      store,
+    }
   }
 }
 </script>
@@ -53,6 +59,7 @@ main{
     .card-container{
       display: flex;
       flex-wrap: wrap;
+      align-content: flex-start;
       width: 90%;
       height: 90%;
     }
