@@ -1,5 +1,5 @@
 <script>
-import Header from './components/main.vue';
+import Header from './components/header.vue';
 import Main from './components/main.vue';
 export default {
   name: 'app',
@@ -7,19 +7,18 @@ export default {
     Header,
     Main,
   }
-
 }
 </script>
 
 <template>
-
-  <Header/>
+  <Header />
 
   <Main />
 
 </template>
 
 
-<style>
+<style lang="scss">
+@import './scss/main.scss';
 
 </style>
