@@ -18,10 +18,15 @@ export default {
 <template>
   <main class="">
     <div class="container">
-      <div class="card-container debug">
+      <div class="card-container">
 
         <Card class="card"
-        v-for="(card,index) in store.charactersList"/>
+        v-for="(card,index) in store.charactersList" :key="index"
+        :img="card.card_images[0].image_url_small"
+        :name="card.name"
+        :type="card.type"
+        :archetype="card.archetype"
+        />
         
       </div>
 
@@ -38,25 +43,25 @@ export default {
 main{
   background-color: $primary-color;
   width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: center;
+  padding-bottom: 50px;
 
   .container{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: white;
-    width: 80%;
-    height: 80%;
+    width: 85%;
     margin-top: 80px;
+    padding: 30px;
 
     .card-container{
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
       align-content: flex-start;
-      width: 90%;
-      height: 90%;
+      width: 100%;
     }
   }
 }
