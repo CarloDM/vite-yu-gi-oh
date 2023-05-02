@@ -19,15 +19,9 @@ export default {
   <main class="">
     <div class="container">
       <div class="card-container debug">
-        <Card class="card"/>
-        <Card class="card"/>
-        <Card class="card"/>
-        <Card class="card"/>
-        <Card class="card"/>
-        <Card class="card"/>
-        <Card class="card"/>
-        <Card class="card"/>
-        <Card class="card"/>
+
+        <Card class="card"
+        v-for="(card,index) in store.charactersList"/>
         
       </div>
 
@@ -39,9 +33,10 @@ export default {
 
 
 <style lang="scss" scoped>
+@use '../scss/variables.scss' as *;
 
 main{
-  background-color: rgb(212, 143, 56);
+  background-color: $primary-color;
   width: 100%;
   height: 100vh;
   display: flex;

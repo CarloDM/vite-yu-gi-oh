@@ -5,7 +5,11 @@ export default {
 </script>
 
 <template>
-  <div class="card debug"></div>
+  <div class="card debug">
+    <img src="" alt="" class="debug">
+    <h3 class="name">nome</h3>
+    <span class="type">alien</span>
+  </div>
   
 </template>
 
