@@ -1,11 +1,13 @@
 
 <script>
+import Counter from './partial/counter.vue'
 import Card from './card.vue';
 import {store} from '../store';
 export default {
   name:'Main',
   components:{
     Card,
+    Counter,
   },
   data(){
     return {
@@ -19,6 +21,7 @@ export default {
   <main class="">
     <div class="container">
       <div class="card-container">
+        <Counter/>
 
         <Card class="card"
         v-for="(card,index) in store.charactersList" :key="index"
@@ -45,16 +48,17 @@ main{
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 
   .container{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: white;
-    width: 85%;
-    margin-top: 80px;
-    padding: 30px;
+    width: 90%;
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 5px;
 
     .card-container{
       display: flex;

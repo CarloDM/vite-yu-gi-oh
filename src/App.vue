@@ -17,7 +17,7 @@ export default {
       axios.get(store.apiUrl)
       .then(result => {
         console.log('api', result.data.data.slice(0,15))
-        store.charactersList = result.data.data.slice(150,180)
+        store.charactersList = result.data.data.slice(150,182)
       })
     }
   },
