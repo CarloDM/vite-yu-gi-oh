@@ -2,12 +2,14 @@
 <script>
 import Counter from './partial/counter.vue'
 import Card from './card.vue';
+import searchB from './searchbar.vue';
 import {store} from '../store';
 export default {
   name:'Main',
   components:{
     Card,
     Counter,
+    searchB,
   },
   data(){
     return {

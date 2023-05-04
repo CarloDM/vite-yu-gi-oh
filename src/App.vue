@@ -2,6 +2,7 @@
 import axios from 'axios';
 import {store} from './store';
 import Header from './components/header.vue';
+import SearchB from './components/searchbar.vue';
 import Main from './components/main.vue';
 
 export default {
@@ -9,6 +10,7 @@ export default {
   components: {
     Header,
     Main,
+    SearchB,
   },
 
   methods:{
@@ -33,8 +35,9 @@ export default {
 </script>
 
 <template>
-  <Header />
 
+  <Header />
+  <SearchB/>
   <Main />
 
 </template>
