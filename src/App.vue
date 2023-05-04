@@ -16,8 +16,12 @@ export default {
     getApi(){
       axios.get(store.apiUrl)
       .then(result => {
+        store.isLoading = true;
         console.log('api', result.data.data.slice(0,15))
-        store.charactersList = result.data.data.slice(150,182)
+        store.charactersList = result.data.data.slice(store.numb,182)
+        store.isLoading = false;
+        // store.next = 
+
       })
     }
   },

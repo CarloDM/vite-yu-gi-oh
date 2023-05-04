@@ -21,6 +21,7 @@ export default {
   <main class="">
     <div class="container">
       <div class="card-container">
+
         <Counter/>
 
         <Card class="card"
@@ -46,8 +47,9 @@ export default {
 main{
   background-color: $primary-color;
   width: 100%;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   padding-bottom: 20px;
 
   .container{
@@ -56,7 +58,7 @@ main{
     align-items: center;
     background-color: white;
     width: 90%;
-    margin-top: 50px;
+    margin: 50px auto;
     padding: 10px;
     border-radius: 5px;
 
